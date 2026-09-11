@@ -60,9 +60,13 @@ layout: null
     color: #FF00B3;
     margin: 0 0 4px 0;
     white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
   }
   @media (max-width: 600px) {
-    h1 { font-size: 11vw; }
+    h1 {
+      font-size: clamp(24px, calc((100vw - 40px) / 9.2), 60px);
+    }
   }
   .blurb {
     color: #000000;
