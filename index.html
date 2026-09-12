@@ -23,7 +23,7 @@
     border-collapse: collapse;
   }
   .page table.details-outer .outer-cell {
-    padding: 0 10px;
+    padding: 0 25px;
     vertical-align: top;
     text-align: left;
   }
@@ -110,6 +110,15 @@
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 8px;
     max-width: 780px;
+  }
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+    .gallery img {
+      height: 75px;
+    }
   }
   .gallery a {
     display: block;
