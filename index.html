@@ -21,31 +21,33 @@
   .page table.details-outer {
     margin: 8px auto;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    table-layout: fixed;
   }
   .page table.details-outer .outer-cell {
     padding: 0 10px;
     vertical-align: top;
     text-align: left;
-    width: 50%;
   }
   .page table.details {
     margin: 0;
     text-align: left;
-    width: 100%;
   }
   .page .gallery {
     margin-left: auto;
     margin-right: auto;
   }
   @media (max-width: 480px) {
+    .page table.details-outer {
+      width: 100%;
+      max-width: 100%;
+      table-layout: fixed;
+    }
     .page table.details-outer .outer-cell {
       padding: 0 3px;
+      width: 50%;
     }
     .page table.details-outer table.details {
       font-size: 11px;
+      width: 100%;
     }
   }
   hr {
