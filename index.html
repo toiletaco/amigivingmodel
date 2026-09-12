@@ -21,14 +21,14 @@ layout: null
     margin: 0 auto;
     text-align: center;
   }
-  .page .details-wrap {
-    display: inline-flex;
-    gap: 40px;
+  .page table.details-outer {
     margin: 8px auto;
-    text-align: left;
+    border-collapse: collapse;
   }
-  .page .detail-col {
-    min-width: 0;
+  .page table.details-outer .outer-cell {
+    padding: 0 20px;
+    vertical-align: top;
+    text-align: left;
   }
   .page table.details {
     margin: 0;
@@ -39,10 +39,10 @@ layout: null
     margin-right: auto;
   }
   @media (max-width: 480px) {
-    .page .details-wrap {
-      gap: 14px;
+    .page table.details-outer .outer-cell {
+      padding: 0 7px;
     }
-    .page .detail-col table.details {
+    .page table.details-outer table.details {
       font-size: 13px;
     }
   }
@@ -194,24 +194,24 @@ layout: null
 
 <hr>
 
-<div class="details-wrap">
-  <div class="detail-col">
+<table class="details-outer"><tr>
+<td class="outer-cell">
   <table class="details">
     <tr><td class="label">Name:</td><td>Kazimierz Babik</td></tr>
     <tr><td class="label">Age:</td><td>25</td></tr>
     <tr><td class="label">Height / Weight:</td><td>182cm / 58.8kg</td></tr>
     <tr><td class="label">Hair / Eyes:</td><td>Brown / Brown</td></tr>
   </table>
-  </div>
-  <div class="detail-col">
+</td>
+<td class="outer-cell">
   <table class="details">
     <tr><td class="label">Location:</td><td>Eindhoven / Warsaw</td></tr>
     <tr><td class="label">Contact:</td><td>kazbabik@gmail.com</td></tr>
     <tr><td class="label">Instagram:</td><td>@zwyklaq</td></tr>
     <tr><td class="label">Portfolio:</td><td><a href="https://www.babik.diy" target="_blank" style="color:#000000; text-decoration:none;">www.babik.diy</a></td></tr>
   </table>
-  </div>
-</div>
+</td>
+</tr></table>
 
 <hr>
 
