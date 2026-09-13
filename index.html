@@ -85,7 +85,7 @@
       font-size: clamp(24px, calc((100vw - 40px) / 9.2), 60px);
     }
     .blurb {
-      margin-top: 24px;
+      margin-top: 14px;
     }
   }
   .blurb {
@@ -174,13 +174,15 @@
     text-align: center;
   }
   #lightbox.open {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #lightbox-inner {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-    margin: 3% auto;
+    margin: 0 auto;
   }
   #lightbox img {
     max-width: 100%;
@@ -212,6 +214,25 @@
     left: auto;
     transform: none;
     font-size: 28px;
+  }
+  @media (max-width: 600px) {
+    #lightbox-inner {
+      max-width: 96%;
+    }
+    #lightbox-prev, #lightbox-next {
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 28px;
+    }
+    #lightbox-prev { left: 4px; }
+    #lightbox-next { right: 4px; }
+    #lightbox-close {
+      top: -34px;
+      font-size: 24px;
+    }
   }
 </style>
 </head>
